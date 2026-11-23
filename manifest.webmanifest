@@ -1,0 +1,17 @@
+{
+  "name": "MAGISTTAH — A magia começa aqui",
+  "short_name": "MAGISTTAH",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#050b18",
+  "theme_color": "#071326",
+  "description": "Lives, agenda, vídeos e redes sociais da MAGISTTAH.",
+  "icons": [
+    {
+      "src": "assets/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

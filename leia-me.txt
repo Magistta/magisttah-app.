@@ -1,0 +1,20 @@
+MAGISTTAH APP — primeira versão PWA
+
+Como testar:
+1. Extraia o ZIP.
+2. Publique a pasta em um serviço de hospedagem HTTPS (por exemplo, Netlify, Vercel ou GitHub Pages).
+3. Abra o endereço no Chrome do Android e escolha "Instalar app" ou "Adicionar à tela inicial".
+
+O que já está incluído:
+- Foto enviada aplicada como fundo principal do aplicativo, com camada azul escura para manter a leitura.
+- Agenda de segunda a sexta, 16h às 21h (horário de Brasília), com aviso de REACT na sexta-feira.
+- Links diretos para YouTube e TikTok.
+- Atalho para a página de vídeos do canal.
+- Estrutura PWA, manifest e cache offline básico.
+
+Ainda requer configuração:
+- Alertas reais no momento em que a live entrar ao vivo precisam de backend, integração com as plataformas e serviço de push.
+- Feed automático dos últimos vídeos precisa de integração/API do YouTube.
+- A publicação na Google Play exige empacotamento Android, conta de desenvolvedor e processo de revisão.
+
+Esta versão é um protótipo inicial funcional de navegação; não está publicada nem conectada a serviços externos.
