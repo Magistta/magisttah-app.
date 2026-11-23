@@ -1,8 +1,8 @@
 MAGISTTAH APP — PWA
 
 Como testar:
-1. Publique o repositório no Netlify para habilitar a função de vídeos.
-2. O feed usa YOUTUBE_API_KEY no ambiente da função. A chave precisa ter acesso à YouTube Data API v3 e não é enviada ao navegador.
+1. Configure YOUTUBE_API_KEY no ambiente da função. A chave precisa ter acesso à YouTube Data API v3 e não é enviada ao navegador.
+2. Publique um novo deploy no Netlify após configurar ou substituir a chave. Abra a aba Vídeos para conferir a lista do canal.
 3. Abra o endereço no Chrome do Android e escolha "Instalar app" ou "Adicionar à tela inicial".
 
 O que já está incluído:

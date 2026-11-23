@@ -1,4 +1,4 @@
-const CACHE = 'magisttah-v2';
+const CACHE = 'magisttah-v3';
 const FILES = ['./', './index.html', './manifest.webmanifest', './assets/magisttah-hero.png', './assets/icon.svg'];
 
 self.addEventListener('install', event => {
