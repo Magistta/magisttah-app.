@@ -9,7 +9,15 @@ async function youtubeList(resource, params, apiKey, signal) {
   });
 
   if (!response.ok) {
-    console.warn(`YouTube Data API: ${resource} retornou HTTP ${response.status}.`);
+    const { error } = await response.json().catch(() => ({}));
+    const reason = error?.details?.find(detail => detail?.['@type'] === 'type.googleapis.com/google.rpc.ErrorInfo')?.reason
+      ?? error?.errors?.[0]?.reason;
+    const knownReasons = [
+      'API_KEY_INVALID', 'API_KEY_SERVICE_BLOCKED', 'API_KEY_HTTP_REFERRER_BLOCKED',
+      'API_KEY_IP_ADDRESS_BLOCKED', 'SERVICE_DISABLED', 'quotaExceeded',
+    ];
+    const diagnosis = knownReasons.includes(reason) ? ` (${reason})` : '';
+    console.warn(`YouTube Data API: ${resource} retornou HTTP ${response.status}${diagnosis}.`);
     throw new Error('Falha na YouTube Data API.');
   }
 
@@ -25,7 +33,7 @@ export default async function youtubeVideos(request) {
     });
   }
 
-  const apiKey = process.env.YOUTUBE_API_KEY;
+  const apiKey = process.env.YOUTUBE_API_KEY?.trim();
   if (!apiKey) {
     console.warn('A chave da YouTube Data API não está configurada na função.');
     return Response.json({ error: 'Vídeos indisponíveis no momento.' }, {
