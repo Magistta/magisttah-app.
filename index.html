@@ -9,12 +9,41 @@
 :root{--blue:#2454C6;--cyan:#39c8ff;--bg:#050b18;--panel:#0d1930;--line:#20375d;--muted:#a8badb}
 *{box-sizing:border-box}body{margin:0;background-color:#050b18;background-image:linear-gradient(180deg,rgba(3,9,22,.16),rgba(3,9,22,.52) 48%,rgba(5,11,24,.92) 100%),url('assets/magisttah-hero.png');background-position:center top;background-size:cover;background-attachment:fixed;background-repeat:no-repeat;color:#f5f8ff;font:16px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}
 button,a{font:inherit}.wrap{max-width:900px;margin:auto;padding:18px 16px 92px;background:linear-gradient(180deg,rgba(5,11,24,.08),rgba(5,11,24,.28) 45%,rgba(5,11,24,.78))}.top{display:flex;justify-content:space-between;align-items:center;gap:12px}.brand{font-weight:900;letter-spacing:.18em;font-size:1.15rem}.eyebrow{color:#8bb9ff;font-size:.72rem;letter-spacing:.2em}.hero{margin-top:16px;min-height:540px;display:flex;align-items:flex-end;position:relative;overflow:hidden;border:1px solid #2d66c4;border-radius:22px;background-color:#071326;background-image:linear-gradient(180deg,rgba(3,9,22,.02) 12%,rgba(3,9,22,.08) 48%,rgba(3,9,22,.88) 100%),url('assets/magisttah-hero.png');background-position:center top;background-size:cover;background-repeat:no-repeat;box-shadow:0 0 35px #1261d455}.hero-copy{padding:210px 20px 22px;position:relative;width:100%;background:linear-gradient(0deg,rgba(5,11,24,.88),rgba(5,11,24,.0))}.hero h1{font-size:clamp(1.5rem,5vw,2.5rem);line-height:1.12;margin:5px 0 8px}.hero p,.muted{color:var(--muted)}.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}.btn{display:inline-flex;justify-content:center;align-items:center;text-decoration:none;border:1px solid #3b73d3;border-radius:13px;padding:11px 16px;color:white;background:linear-gradient(135deg,#2454c6,#12327c);font-weight:750}.btn.secondary{background:#101f39;border-color:#29446d}.section{margin-top:24px}.section h2{font-size:1.1rem;margin:0 0 12px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.card{background:linear-gradient(145deg,#10213e,#091426);border:1px solid var(--line);border-radius:17px;padding:15px}.card strong{display:block}.card small{color:var(--muted)}.days{display:grid;grid-template-columns:repeat(5,1fr);gap:7px}.day{padding:11px 4px;text-align:center;background:#0d1c34;border:1px solid #243c62;border-radius:12px;font-size:.8rem}.day b{display:block;color:#91c5ff}.status{display:inline-block;border:1px solid #285c9b;color:#a8d6ff;border-radius:99px;padding:4px 10px;font-size:.75rem}.video-frame{width:100%;aspect-ratio:16/9;border:0;border-radius:13px;background:#050b18}.tabs{position:fixed;bottom:0;left:0;right:0;background:#071326ee;backdrop-filter:blur(14px);border-top:1px solid #20375d;display:flex;justify-content:center;gap:4px;padding:9px 8px calc(9px + env(safe-area-inset-bottom));z-index:5}.tabs a{color:#a9c4ef;text-decoration:none;text-align:center;font-size:.72rem;padding:5px 12px;border-radius:10px}.tabs a:focus,.tabs a:hover{background:#18366b;color:white}.foot{text-align:center;color:#6f87ae;font-size:.75rem;margin-top:28px}.notice{font-size:.82rem;color:#a8badb}.icon{font-size:1.2rem;display:block}@media(max-width:520px){.grid{grid-template-columns:1fr}.hero{min-height:500px;background-position:center top}.hero-copy{padding:210px 16px 18px}.tabs a{padding:5px 9px}}
+ .video-heading{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 16px;margin-bottom:12px}
+ .video-heading h2{margin:0}
+ .video-heading .btn{font-size:.82rem;padding:7px 12px}
+ .video-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:0;padding:0;list-style:none}
+ .video-grid>li{display:flex;min-width:0}
+ .video-card{display:flex;flex-direction:column;width:100%;padding:0;overflow:hidden;color:inherit;text-decoration:none}
+ .video-card:hover,.video-card:focus-visible{border-color:var(--blue)}
+ .video-card:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+ .video-thumb{position:relative;display:grid;place-items:center;aspect-ratio:16/9;overflow:hidden;background:linear-gradient(145deg,var(--blue),var(--panel));border-bottom:2px solid var(--blue)}
+ .video-thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+ .video-play{position:relative;display:grid;place-items:center;width:44px;height:40px;border:1px solid #8bb9ff;border-radius:12px;background:#071326e6}
+ .video-play::after{content:"";margin-left:3px;border:7px solid transparent;border-left:11px solid #f5f8ff;border-right:0}
+ .video-card:hover .video-play,.video-card:focus-visible .video-play{background:var(--blue)}
+ .video-info{display:flex;flex:1;flex-direction:column;justify-content:space-between;gap:10px;padding:12px 14px 14px}
+ .video-info h3{margin:0;font-size:.98rem;line-height:1.35;overflow-wrap:anywhere}
+ .video-meta{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 8px;color:var(--muted);font-size:.76rem}
+ .video-watch{color:#a8d6ff;font-weight:700}
+ .video-message{margin:0}
+ .video-message:empty{padding:0;border:0}
+ @media(max-width:720px){.video-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+ @media(max-width:520px){.video-grid{grid-template-columns:1fr}}
 </style></head>
 <body><main class="wrap">
 <header class="top"><div><div class="eyebrow">UNIVERSO OFICIAL</div><div class="brand">MAGISTTAH</div></div><span class="status">✦ MAGIA • GAMES</span></header>
 <section class="hero" id="inicio"><div class="hero-copy"><div class="eyebrow">ENTRE NO MEU UNIVERSO</div><h1>A magia do Magisttah começa aqui!</h1><p>Lives, vídeos e novidades em um só lugar.</p><div class="actions"><a class="btn" href="https://youtube.com/@magisttah" target="_blank" rel="noopener">▶ YouTube</a><a class="btn secondary" href="https://www.tiktok.com/@magisttahofc" target="_blank" rel="noopener">♪ TikTok</a></div></div></section>
 <section class="section" id="agenda"><h2>✧ Agenda de transmissões</h2><div class="card"><div class="days"><div class="day"><b>SEG</b>16h–21h</div><div class="day"><b>TER</b>16h–21h</div><div class="day"><b>QUA</b>16h–21h</div><div class="day"><b>QUI</b>16h–21h</div><div class="day"><b>SEX</b>16h–21h<br><span style="color:#8fc8ff;font-weight:700">✦ REACT</span></div></div><p class="notice">Horários de Brasília. A programação pode sofrer alterações.</p></div></section>
-<section class="section" id="videos"><h2>✧ Vídeos recentes</h2><div class="card"><p class="muted">Acesse os vídeos mais recentes diretamente no canal:</p><a class="btn" href="https://www.youtube.com/@magisttah/videos" target="_blank" rel="noopener">Ver vídeos no YouTube ↗</a><p class="notice">A incorporação automática dos últimos vídeos será ativada na próxima etapa, com a integração do canal.</p></div></section>
+<section class="section" id="videos" aria-labelledby="videos-heading">
+  <div class="video-heading">
+    <h2 id="videos-heading">✧ Vídeos recentes</h2>
+    <a class="btn" href="https://www.youtube.com/@magisttah/videos" target="_blank" rel="noopener">Ver vídeos no YouTube ↗</a>
+  </div>
+  <p class="card muted video-message" id="video-message" role="status"></p>
+  <ul class="video-grid" id="video-list" role="list"></ul>
+  <noscript><p class="card muted">A lista automática precisa de JavaScript. Você também pode assistir direto no canal.</p></noscript>
+</section>
 <section class="section" id="redes"><h2>✧ Encontre a MAGISTTAH</h2><div class="grid"><a class="card" href="https://youtube.com/@magisttah" target="_blank" rel="noopener" style="color:inherit;text-decoration:none"><strong>▶ YouTube</strong><small>@magisttah</small></a><a class="card" href="https://www.tiktok.com/@magisttahofc" target="_blank" rel="noopener" style="color:inherit;text-decoration:none"><strong>♪ TikTok</strong><small>@magisttahofc</small></a></div></section>
 <section class="section"><div class="card"><h2>✧ Notificações de live</h2><p class="muted">Ative os avisos neste dispositivo para receber lembretes locais da programação.</p><button class="btn" id="notify">Ativar notificações</button><p class="notice" id="notify-msg">Avisos automáticos quando a live realmente entrar ao vivo exigem integração de servidor com as plataformas. Este protótipo ainda não confirma o status ao vivo.</p></div></section>
 <footer class="foot">MAGISTTAH • A magia do Magisttah começa aqui!</footer></main>
@@ -22,4 +51,75 @@ button,a{font:inherit}.wrap{max-width:900px;margin:auto;padding:18px 16px 92px;b
 <script>
 if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}))}
 document.getElementById('notify').addEventListener('click',async()=>{const msg=document.getElementById('notify-msg');if(!('Notification'in window)){msg.textContent='Este navegador não oferece suporte a notificações.';return}const p=await Notification.requestPermission();msg.textContent=p==='granted'?'Permissão concedida neste dispositivo. Os alertas de live em tempo real serão ligados na etapa de integração.':'As notificações não foram autorizadas.';});
+
+function videoCard(video, dateFormat) {
+  const item = document.createElement('li');
+  const link = document.createElement('a');
+  link.className = 'card video-card';
+  link.href = video.url;
+  link.target = '_blank';
+  link.rel = 'noopener';
+
+  const thumbnail = document.createElement('div');
+  thumbnail.className = 'video-thumb';
+  thumbnail.setAttribute('aria-hidden', 'true');
+  if (video.thumbnail) {
+    const image = document.createElement('img');
+    image.alt = '';
+    image.loading = 'lazy';
+    image.decoding = 'async';
+    image.addEventListener('error', () => image.remove());
+    image.src = video.thumbnail;
+    thumbnail.append(image);
+  }
+  const play = document.createElement('span');
+  play.className = 'video-play';
+  thumbnail.append(play);
+
+  const info = document.createElement('div');
+  info.className = 'video-info';
+  const title = document.createElement('h3');
+  title.textContent = video.title;
+  const meta = document.createElement('div');
+  meta.className = 'video-meta';
+  const date = document.createElement('time');
+  date.dateTime = video.publishedAt;
+  date.textContent = dateFormat.format(new Date(video.publishedAt));
+  const watch = document.createElement('span');
+  watch.className = 'video-watch';
+  watch.textContent = 'Assistir ↗';
+  meta.append(date, watch);
+  info.append(title, meta);
+  link.append(thumbnail, info);
+  item.append(link);
+  return item;
+}
+
+async function loadVideos() {
+  const list = document.getElementById('video-list');
+  const message = document.getElementById('video-message');
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 12000);
+  message.textContent = 'Carregando os vídeos do canal…';
+
+  try {
+    const response = await fetch('/.netlify/functions/youtube-videos', { signal: controller.signal });
+    if (!response.ok) throw new Error('Vídeos indisponíveis.');
+    const { videos } = await response.json();
+    if (!videos.length) {
+      message.textContent = 'Nenhum vídeo foi encontrado no canal por enquanto.';
+      return;
+    }
+
+    const dateFormat = new Intl.DateTimeFormat('pt-BR', { dateStyle: 'medium', timeZone: 'America/Sao_Paulo' });
+    list.replaceChildren(...videos.map(video => videoCard(video, dateFormat)));
+    message.textContent = '';
+  } catch {
+    message.textContent = 'Não conseguimos carregar os vídeos agora. Tente novamente mais tarde ou visite o canal.';
+  } finally {
+    clearTimeout(timeout);
+  }
+}
+
+loadVideos();
 </script></body></html>
