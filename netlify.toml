@@ -1,0 +1,6 @@
+[build]
+  command = "mkdir -p dist && cp -R index.html manifest.webmanifest sw.js assets dist/"
+  publish = "dist"
+
+[functions]
+  directory = "netlify/functions"
